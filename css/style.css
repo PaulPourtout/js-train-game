@@ -1,0 +1,190 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #00CCBB;
+	color: #fff;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+#game-container {
+	border-bottom: 4px solid #ECECEC;
+	border-top: 4px solid #ECECEC;
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+
+#train {
+	position: relative;
+	left: 0;
+	height: 80px;
+	width: 90px;
+	box-sizing: border-box;
+}
+
+#stopTrain {
+	margin-top: 20px;
+	color: #fff;
+	padding: 20px 40px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: #CC2200;
+	border: 3px solid #000;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+#stopTrain:hover {
+	background-color: #AC2000;
+}
+
+.train-body-head {
+	position: absolute;
+	background-color: #CC2200;
+	width: 50%;
+	height: 30px;
+	bottom: 20px;
+	right: 0;
+	box-sizing: border-box;
+	border-top-right-radius: 5px;
+	border-bottom: 3px solid #000;
+	border-top: 3px solid #000;
+	border-right: 3px solid #000;
+}
+.train-body-cabine {
+	position: absolute;
+	box-sizing: border-box;
+	background-color: #CC2200;
+	width: 50%;
+	height: 50px;
+	bottom: 20px;
+	left: 0;
+	border: 3px solid #000;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.train-body-glass {
+	background-color: #0099CC;
+	position: absolute;
+	right: 0;
+	top: 5px;
+	width: 15px;
+	height: 10px;
+}
+
+.train-body-bottom {
+	position: absolute;
+	background-color: #CC9900;
+	width: 100%;
+	box-sizing: border-box;
+	height: 10px;
+	bottom: 10px;
+	border-bottom-left-radius: 25%;
+	border-bottom-right-radius: 25%;
+	border-bottom: 3px solid #000;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	right: 0;
+}
+
+
+.train-chimney {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 10px;
+	right: 15%;
+	box-sizing: border-box;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-top: 3px solid #000;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	background-color: #E0E58C;
+}
+
+.train-wheel {
+		box-sizing: border-box;
+	background-color: #fff;
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	bottom: 0;
+	border-radius: 50%;
+	border: 5px solid #000;
+}
+.train-wheel:nth-of-type(1) {
+	height: 30px;
+	width: 30px;
+	left: 5px;
+}
+.train-wheel:nth-of-type(2) {
+	left: 35px;
+}
+.train-wheel:nth-of-type(3) {
+	left: 60px;
+}
+
+.train-explode {
+	position: absolute;
+	border-radius: 50%;
+	z-index: 20;
+	transform: scale(0);
+}
+
+.run-explode-animation {
+	animation: trainExplosion;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.train-explode:nth-of-type(1) {
+	left: 0;
+	bottom: 0;
+	width: 100px;
+	height: 100px;
+	background-color: #EECC00;
+}
+.train-explode:nth-of-type(2) {
+	left: 50%;
+	bottom: 25%;
+	width: 50px;
+	height: 50px;
+	background-color: #FF6600;
+}
+.train-explode:nth-of-type(3) {
+	left: 0;
+	bottom: 0;
+	width: 70px;
+	height: 70px;
+	background-color: #FFAA00;
+}
+.train-explode:nth-of-type(4) {
+	left: 0;
+	bottom: 0;
+	width: 50px;
+	height: 50px;
+	background-color: #EE9900;
+}
+.train-explode:nth-of-type(5) {
+	left: 0;
+	bottom: 0;
+	width: 50px;
+	height: 50px;
+	background-color: #FF9900;
+}
+
+@keyframes trainExplosion {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
